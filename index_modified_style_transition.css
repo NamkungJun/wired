@@ -1,0 +1,33 @@
+.main-nav a:hover{
+    color: #fff;
+    -webkit-transition: all 0.15s;
+    -moz-transition:all 0.15s;
+    transition:all 0.15s;
+}
+.nav-opened a:hover{
+    color: #fff;
+    -webkit-transition: all 0.15s;
+    -moz-transition:all 0.15s;
+    transition:all 0.15s;
+}
+li.business-nav:hover{
+    background-color: #009f2e;
+}
+li.culture-nav:hover{
+    background-color: #41274b
+}
+li.design-nav:hover{
+    background-color: #a0c9cc;
+}
+li.gear-nav:hover{
+    background-color: #1f849f;
+}
+li.science-nav:hover{
+    background-color: #ffc0b6;
+}
+li.security-nav:hover{
+    background-color: #621200;
+}
+li.transportation-nav:hover{
+    background-color: #e44c50;
+}

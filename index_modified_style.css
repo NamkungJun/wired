@@ -1,0 +1,201 @@
+/* reset.css 기본적용 css삭제 */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+li{
+    list-style: none;
+    box-sizing: border-box;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+body{
+    /* 타이포그라피 지정 */
+    font-size:0.625em;
+    line-height: 1.5;
+    font-family:"APPLE SD Gothic NEO", "Nanum Gothic", sans-serif; 
+    /* color 지정 */
+    background-color: rgb(246, 246, 246);
+}
+button{
+    border: 0;
+    background-color: transparent;
+}
+.header{
+    background-color: #fff;
+    position: fixed;
+    left: 0; top: 0; right: 0;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+/* header */
+/* header에는 좌측 버튼, 로고, 우측 버튼으로 나뉨
+  header전체는 상단 고정이므로 position: fixed로 고정시킴
+ 로고는 text-align: cnenter로 가운데 정렬을 시킴
+ 좌측 우측 버튼은 position: absolute로 위치시킴
+ nav는 float를 사용하여 일렬로 놓음
+
+*/
+.header .header-wrap{
+    text-align:center;
+    height:60px;
+    border-bottom:1px solid #ccc;
+}
+.header h1{
+    line-height: 60px;
+}
+.header .nav-open{
+    position: absolute;
+    left: 20px; top: 20px;
+}
+.header .etc{
+    position: absolute;
+    right: 20px; top: 20px;
+}
+.gnb ul::after{
+    content:'';
+    display: block;
+    clear: both;
+}
+.gnb li{
+    float: left;
+    width:14.285714%;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.gnb li:last-child{
+    border-right: 0;
+}
+.main-nav li{
+    height: 30px;
+    line-height: 30px;
+}
+.nav-other{
+    width: 71.428571%;
+    margin: 0 auto;
+}
+.nav-other li{
+    width:20%;
+    border: 0;
+}
+/* main */
+.main{
+    padding-top:250px;
+    width: 932px;
+    margin: 0 auto;
+}
+/* .card, .col1 처럼 일관 적용할 수 있는 css속성들을 잘 파악하여보자
+  (카드의 border, 배경색, 그림자, 마진, 패딩 등이 모든 카드들의 공통적인 속성들이었음
+   .card-component, wide-card, col1으로 2/3, 3/3, 1/3 크기의 카드들을 모듈화
+   이외에도 small카드, big카드 등등 공통점들을 많이 찾아보았음)
+  => 작업속도단축, 코드 간소화, 유지보수용이 */
+.card{
+    padding:16px;
+    background-color: #fff;
+    margin: 0 16px 16px 0;
+    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    border-top: 3px solid #000;
+}
+.col1{
+    width:33.333333%;
+}
+.col1 > div{
+    border-top: 9px solid #000;
+}
+.wide-card{
+    margin-right: 0;
+    clear: both;
+    border-top: 9px solid #000;
+}
+.no-margin-right{
+    margin-right: 0;
+}
+.upper-card-section::after{
+    content:'';
+    display: block;
+    clear: both;
+}
+.card-component{
+    width:66.666666%;
+}
+.left-card{
+    float: left;
+}
+.most-popular{
+    float: left;
+}
+.video-playlist-component{
+    clear: both;
+}
+.card-component-row::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.card-component-row-big{
+    float:left;
+    width:65%;
+}
+.card-component-row-small{
+    float: left;
+    width: 35%;
+}
+.card-component-same{
+    width: 50%;
+    float: left;
+}
+.middle-card-section::after{
+    content:'';
+    display: block;
+    clear: both;
+}
+.most-recent{
+    float: left;
+}
+.right-card{
+    float:left;
+}
+.under-card-section::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.under-card-section > div{
+    float: left;
+}
+/* footer */
+.footer{
+    text-align: center;
+    padding: 32px 0;
+    background-color: #fff;
+    box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.3);
+}
+.footer .sns-link ul{
+    width: 40%;
+    margin:16px auto;
+}
+.footer .sns-link ul::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.footer .sns-link li{
+    width:20%;
+    float: left;
+}
+.footer .footer-link-list{
+    margin: 32px
+}
+.footer .footer-link-list li{
+    display: inline-block;
+    padding: 0 8px;
+    margin-bottom: 7px;
+    border-right: 1px solid #ccc;
+}
